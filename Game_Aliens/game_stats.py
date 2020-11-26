@@ -4,6 +4,7 @@ class GameStats():
     def __init__(self, ai_settings):
         """初始化统计信息"""
         self.ai_settings = ai_settings
+        self.high_score = 0
         self.reset_stats()
 
         # 游戏刚启动时处于活跃状态
