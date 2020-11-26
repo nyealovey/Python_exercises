@@ -1,11 +1,11 @@
 import pygame
-from game_stats import GameStats
-from settings import Settings
-from ship import Ship
-import game_functions as gf
+from Game_Aliens.game_stats import GameStats
+from Game_Aliens.settings import Settings
+from Game_Aliens.ship import Ship
+import Game_Aliens.game_functions as gf
 from pygame.sprite import Group
-from button import Button
-from scoreboard import Scoreboard
+from Game_Aliens.button import Button
+from Game_Aliens.scoreboard import Scoreboard
 
 
 def run_gmae():
@@ -41,7 +41,7 @@ def run_gmae():
     while True:
 
         # 监视键盘和鼠标事件
-        gf.check_events(ai_settings, screen, stats, play_button, ship, aliens,
+        gf.check_events(ai_settings, screen, stats, sb,play_button, ship, aliens,
                         bullets)
 
         if stats.game_active:
@@ -52,7 +52,7 @@ def run_gmae():
                               bullets)
 
             # 更新外星人
-            gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
+            gf.update_aliens(ai_settings,  screen, stats,sb,ship, aliens, bullets)
 
         # 每次循环时都重绘屏幕,并让最近绘制的屏幕可见
         gf.update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets,
