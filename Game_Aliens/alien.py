@@ -5,6 +5,7 @@ from pygame.sprite import Sprite
 
 class Alien(Sprite):
     """表示单个外星人的类"""
+
     def __init__(self, ai_settings, screen):
         super().__init__()
         self.screen = screen
@@ -28,10 +29,10 @@ class Alien(Sprite):
         """在指定位置绘制外星人"""
         self.screen.blit(self.image, self.rect)
 
-
     def update(self):
         """向左右移动外星人"""
-        self.x += (self.ai_settings.alien_speed_factor * self.ai_settings.fleet_direction)
+        self.x += (
+                    self.ai_settings.alien_speed_factor * self.ai_settings.fleet_direction)
         self.rect.x = self.x
 
     def check_edges(self):
@@ -41,4 +42,3 @@ class Alien(Sprite):
             return True
         elif self.rect.left <= 0:
             return True
-

@@ -8,7 +8,6 @@ from button import Button
 from scoreboard import Scoreboard
 
 
-
 def run_gmae():
     # 初始化游戏并创建一个屏幕对象
     pygame.init()
@@ -42,22 +41,22 @@ def run_gmae():
     while True:
 
         # 监视键盘和鼠标事件
-        gf.check_events(ai_settings, screen, stats, play_button, ship, aliens,bullets)
+        gf.check_events(ai_settings, screen, stats, play_button, ship, aliens,
+                        bullets)
 
         if stats.game_active:
-
             # 移动飞船
             ship.update()
             # 更新子弹
-            gf.update_bullets(ai_settings, screen, stats,sb,ship, aliens, bullets)
+            gf.update_bullets(ai_settings, screen, stats, sb, ship, aliens,
+                              bullets)
 
             # 更新外星人
-            gf.update_aliens(ai_settings, stats, screen,ship, aliens,bullets)
+            gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
 
         # 每次循环时都重绘屏幕,并让最近绘制的屏幕可见
-        gf.update_screen(ai_settings, screen, stats,sb,ship, aliens, bullets,play_button)
-
+        gf.update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets,
+                         play_button)
 
 
 run_gmae()
-

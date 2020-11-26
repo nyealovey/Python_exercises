@@ -4,7 +4,6 @@ class Settings():
     """
 
     def __init__(self):
-
         """ 初始化游戏的静态设置 """
         # 屏幕设置
         self.screen_width = 600
@@ -39,7 +38,6 @@ class Settings():
         self.alien_points = 50
         self.score_scale = 1.5
 
-
     def initalize_dynamic_settings(self):
         """初始化随游戏进行而变化的设置"""
 
@@ -51,7 +49,6 @@ class Settings():
         # fleet_direction 为1标男士向右，为-1 表示向左
         self.fleet_direction = 1
 
-
     def increase_speed(self):
         """提高速度设置"""
 
@@ -59,5 +56,3 @@ class Settings():
         self.bullet_speed_factor *= self.speedup_scale
         self.alien_speed_factor *= self.speedup_scale
         self.alien_points = int(self.score_scale * self.alien_points)
-
-
