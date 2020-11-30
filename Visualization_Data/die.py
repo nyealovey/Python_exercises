@@ -9,4 +9,4 @@ class Die():
 
     def roll(self):
         """返回一个位于1和筛子面之间的随机"""
-        return randint(1,self.num_sides)
+        return randint(1, self.num_sides)
