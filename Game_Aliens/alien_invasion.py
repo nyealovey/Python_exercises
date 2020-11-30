@@ -1,5 +1,5 @@
 import pygame
-from Exercises.Game_Aliens.game_stats import GameStats
+from Game_Aliens.game_stats import GameStats
 from Game_Aliens.settings import Settings
 from Game_Aliens.ship import Ship
 import Game_Aliens.game_functions as gf
